@@ -1,0 +1,18 @@
+.top-btn {
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  opacity: 0;
+  a {
+    font-size: 40px;
+    color: rgba(173, 170, 170, 0.7);
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+.show-top-btn {
+  opacity: 1;
+}

@@ -1,0 +1,137 @@
+.landing-page {
+  height: 100vh;
+  //Navigation
+  nav {
+    top: 0%;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    .navigation-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      transition: all 0.6s ease;
+      .logo {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+      }
+      .navigation-links-wrap {
+        z-index: 4000;
+        ul {
+          height: 80px;
+          display: flex;
+          margin-top: 19.5px;
+          justify-content: center;
+          align-items: center;
+          li {
+            list-style: none;
+            padding-left: 30px;
+            transition: all 0.4s ease;
+            &:last-child {
+              padding-right: 0;
+            }
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              color: white;
+              font-size: 20px;
+              letter-spacing: 1px;
+              transition: all 0.4s ease;
+            }
+            &:hover {
+              transform: translateY(5px);
+            }
+            &:hover a {
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+    .navbar-background {
+      background: $navBarBgColor;
+      box-shadow: 0px 0px 5px black;
+      .navigation-links-wrap {
+        ul {
+          li {
+            a {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .carousel-inner {
+    .carousel-item {
+      height: 100vh;
+      .carousel-caption {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 7px;
+          font-weight: bolder;
+          font-size: $h1XL;
+        }
+        h2 {
+          text-transform: capitalize;
+          font-size: $h2XL;
+          font-weight: bolder;
+          letter-spacing: 5px;
+        }
+        h3 {
+          text-transform: uppercase;
+          font-size: $h3XL;
+          font-weight: bolder;
+          padding-top: 20px;
+          letter-spacing: 5px;
+        }
+        p {
+          font-size: $pXL;
+          font-style: italic;
+          letter-spacing: 2px;
+        }
+      }
+      .slider {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+      #sl-1 {
+        background-image: url("img/pocetna.jpg");
+      }
+      #sl-2 {
+        background-image: url("img/kupatilooo.jpg");
+      }
+      #sl-3 {
+        background-image: url("img/plociceSlider.jpg");
+      }
+      #sl-4 {
+        background-image: url("img/drveniPodoviSlider.jpg");
+      }
+      #sl-5 {
+        background-image: url("img/fasadeSlider.jpg");
+      }
+    }
+  }
+}
