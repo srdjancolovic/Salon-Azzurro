@@ -1,0 +1,90 @@
+//COLORS
+$navBarBgColor: white;
+
+//Font sizes
+$h1XL: 50px;
+$h1Md: 45px;
+$h1Sm: 40px;
+$h1Mob: 35px;
+
+$h2XL: 45px;
+$h2Md: 35px;
+$h2Sm: 34px;
+$h2Mob: 33px;
+
+$h3XL: 40px;
+$h3Md: 35px;
+$h3Sm: 33px;
+$h3Mob: 29px;
+
+$h5XL: 15px;
+$h5Md: 14px;
+$h5Sm: 13px;
+$h5Mob: 11px;
+
+$h6XL: 22px;
+$h6Md: 21px;
+$h6Sm: 20px;
+$h6Mob: 20px;
+
+$pXL: 17px;
+$pMd: 17px;
+$pSm: 17px;
+$pMob: 16px;
+
+$offerLiFontSizeXl: 17px;
+$offerLiFontSizeMd: 17px;
+$offerLiFontSizeSm: 17px;
+$offerLiFontSizeMob: 16px;
+
+$btnXL: 18px;
+
+.heading {
+  padding-top: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+  h2 {
+    font-size: $h2XL;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1px;
+  }
+}
+//MIXINS
+@mixin text {
+  p {
+    font-size: $pXL;
+    letter-spacing: 0.8px;
+    color: black;
+    text-align: justify;
+    line-height: 1.6;
+    padding-right: 50px;
+  }
+}
+@mixin button {
+  text-decoration: none;
+  padding: 10px 35px;
+  font-size: $btnXL;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+
+  .fa-arrow-right {
+    transition: all 0.4s ease;
+    color: white;
+    opacity: 0;
+    margin-left: -18px;
+  }
+  &:hover {
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  &:hover .fa-arrow-right {
+    opacity: 1;
+    color: white;
+    margin-left: 13px;
+  }
+}

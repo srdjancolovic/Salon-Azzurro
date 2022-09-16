@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Poppins";
+}
+@import "./varsMixins";
+@import "./landingPage";
+@import "./about";
+@import "./brands";
+@import "./offer";
+@import "./contact";
+@import "./preloader";
+@import "./topBtn";
+@import "./mediaQuery";
+
+.owl-theme {
+  .owl-dots {
+    .owl-dot {
+      span {
+        background: gray;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

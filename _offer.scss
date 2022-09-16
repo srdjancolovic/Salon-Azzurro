@@ -1,0 +1,261 @@
+#offer {
+  &::before {
+    content: '';
+    display: block;
+    height: 80px;
+    margin-top: -80px;
+  }
+}
+
+.offer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 10px solid black;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .offer-carousel {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .offer-box {
+      border-radius: 5px;
+      background: rgba(205, 219, 224, 0.85);
+      margin: 0 auto;
+      width: 350px;
+      height: 580px;
+      position: relative;
+      z-index: 1000;
+
+      img {
+        background: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 350px;
+        height: 260px;
+      }
+
+      .box-body {
+        text-align: center;
+
+        h6 {
+          padding-top: 25px;
+          font-size: $h6XL;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: bold;
+        }
+
+        p {
+          padding-top: 25px;
+          text-transform: uppercase;
+          padding-bottom: 25px;
+          letter-spacing: 1px;
+          font-size: $pXL;
+        }
+
+        ul {
+          li {
+            list-style: none;
+            display: block;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: $offerLiFontSizeXl;
+            padding-top: 8px;
+          }
+        }
+
+        .catalogue-btn {
+          @include button;
+          position: absolute;
+          height: 50px;
+          width: 190px;
+          bottom: 10px;
+          left: 50%;
+          transform: translate(-50%, -10px);
+        }
+      }
+    }
+
+    .tiles-box {
+      height: 520px;
+    }
+  }
+}
+
+.swiper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media screen and (min-width: 1920px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 1350px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 93%;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 90%;
+  }
+}
+
+.swiper-slide {
+  border-radius: 5px;
+  background: rgba(205, 219, 224, 0.85);
+  height: 580px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: grab;
+
+  img {
+    width: 100%;
+    height: 260px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: white;
+  }
+
+
+
+  h6 {
+    padding-top: 25px;
+    font-size: $h6XL;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  p {
+    padding-top: 25px;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+    font-size: $pXL;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      display: block;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: $offerLiFontSizeXl;
+      padding-top: 8px;
+
+      a {
+        text-decoration: underline;
+        color: initial;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .catalogue-btn {
+    @include button;
+    position: absolute;
+    height: 50px;
+    width: 190px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.swiper-slide-smaller {
+  height: 520px;
+}
+
+.swiper-control-btn {
+  position: absolute;
+  color: black;
+  padding: 35px;
+  background-color: white;
+  border-radius: 5px;
+  top: 60%;
+  transform: translateY(-60%);
+
+  @media screen and (max-width: 1600px) {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  right: 15%;
+
+  @media screen and (max-width: 1850px) {
+    right: 10%;
+  }
+}
+
+.swiper-button-prev {
+  left: 15%;
+
+  @media screen and (max-width: 1850px) {
+    left: 10%;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 60px !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translate(-50%) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
+
+.bathroom {
+  background-image: url('img/kup2.jpg');
+}
+
+.tiles {
+  background-image: url('img/plocice-brend.jpg');
+  background-position: bottom;
+}
+
+.wood-floor {
+  background-image: url('img/drveniPod.jpg');
+}
+
+.fasada {
+  background-image: url('img/fasadaBackground.jpg');
+}
+
+.ostala-ponuda {
+  background-image: url('img/OstalaPonudaBg.jpg');
+}
